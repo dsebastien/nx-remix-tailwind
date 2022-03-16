@@ -9,7 +9,10 @@
     "target": "ES2019",
     "strict": true,
     "paths": {
-      "~/*": ["./app/*"]
+      "~/*": ["./app/*"],
+      "~my/demo-lib": [
+        "../../libs/demo-lib/src"
+      ]
     },
     // Remix takes care of building everything in `remix build`.
     "noEmit": true

@@ -1,5 +1,6 @@
 import type { MetaFunction, LoaderFunction } from 'remix';
-import { useLoaderData, json, Link } from 'remix';
+import { useLoaderData, json } from 'remix';
+import { DemoLib } from "~my/demo-lib";
 
 type IndexData = {
 };
@@ -32,6 +33,7 @@ export default function Index() {
     <>
       <main className="">
         Hello world
+        <DemoLib />
       </main>
     </>
   );
