@@ -5,8 +5,8 @@
   "license": "",
   "scripts": {
     "prebuild": "rimraf ./public/build \"./app/styles/**/*.css\"",
-    "build": "run-p build:*",
-    "build:css": "npm run css:build --env production",
+    "build": "npm-run-all --serial build:*",
+    "build:css": "npm run generate:css --env production",
     "build:remix": "cross-env NODE_ENV=production npx remix build",
     "generate:css": "postcss styles --base ./styles --dir ./app/styles",
     "predev": "rimraf ./app/styles/**/*.css && npm run generate:css",
