@@ -4,8 +4,8 @@ export interface DemoLibProps {}
 
 export function DemoLib(props: DemoLibProps) {
   return (
-    <div>
-      <h1>Welcome to DemoLib!</h1>
+    <div className="mt-5 p-5 flex flex-col rounded border-solid border flex flex-row items-center">
+      Welcome to DemoLib!
     </div>
   );
 }

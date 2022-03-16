@@ -2,5 +2,6 @@
   "root": "apps/demo",
   "sourceRoot": "apps/demo",
   "projectType": "application",
-  "tags": []
+  "tags": [],
+  "implicitDependencies": ["demo-lib"]
 }
