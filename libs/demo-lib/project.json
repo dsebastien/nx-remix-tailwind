@@ -1,0 +1,56 @@
+{
+  "root": "libs/demo-lib",
+  "sourceRoot": "libs/demo-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": [
+        "{options.outputPath}"
+      ],
+      "options": {
+        "outputPath": "libs/demo-lib/dist",
+        "tsConfig": "libs/demo-lib/tsconfig.lib.json",
+        "project": "libs/demo-lib/package.json",
+        "entryFile": "libs/demo-lib/src/index.ts",
+        "external": [
+          "react/jsx-runtime"
+        ],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/demo-lib/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ],
+        "format": [
+          "cjs"
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": [
+        "{options.outputFile}"
+      ],
+      "options": {
+        "lintFilePatterns": [
+          "libs/demo-lib/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": [
+        "coverage/libs/demo-lib"
+      ],
+      "options": {
+        "jestConfig": "libs/demo-lib/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}
