@@ -6,7 +6,8 @@
     "start": "cd ./apps/demo && npm run dev",
     "build": "nx build",
     "test": "nx test",
-    "postinstall": "remix setup node"
+    "postinstall": "remix setup node",
+    "tsc": "tsc --project ./apps/demo --noEmit"
   },
   "private": true,
   "dependencies": {
