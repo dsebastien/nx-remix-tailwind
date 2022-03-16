@@ -3,6 +3,7 @@
 # Remix
 apps/demo/.cache/
 apps/demo/build/
+apps/demo/app/styles/**/*.css
 
 # compiled output
 dist

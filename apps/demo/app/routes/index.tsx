@@ -31,10 +31,10 @@ export default function Index() {
 
   return (
     <>
-      <main className="">
-        Hello world
-        <DemoLib />
-      </main>
+      <div className="">
+        <span className="text-3xl flex flex-col items-center underline text-primary-500">Hello world</span>
+      </div>
+      <DemoLib />
     </>
   );
 }

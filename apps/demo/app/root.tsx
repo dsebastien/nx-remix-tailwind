@@ -10,11 +10,13 @@ import {
 } from 'remix';
 import type { LinksFunction } from 'remix';
 
+import tailwindStylesUrl from '~/styles/tailwind.css';
 import globalStylesUrl from '~/styles/global.css';
 
 // https://remix.run/api/app#links
 export let links: LinksFunction = () => {
   return [
+    { rel: 'stylesheet', href: tailwindStylesUrl },
     { rel: 'stylesheet', href: globalStylesUrl },
   ];
 };

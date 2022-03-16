@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "start": "cd ./apps/demo && npm run dev",
+    "start:app": "cd ./apps/demo && npm run dev",
+    "start": "nx start",
     "build": "nx build",
     "test": "nx test",
     "postinstall": "remix setup node",
